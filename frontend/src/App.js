@@ -22,7 +22,7 @@ import "./bootstrap.min.css";
 const App = () => {
   return (
     <>
-      <Router>
+      <Router basename="/ProShop">
         <Header />
         <main className="m-4">
           <div>

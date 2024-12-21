@@ -9,6 +9,7 @@ import productRoutes from "./routes/productRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import orderRoutes from "./routes/orderRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
+import cors from "cors";
 
 dotenv.config();
 
@@ -46,8 +47,15 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-app.use(notFound); 
+app.use(notFound);
 app.use(errorHandler);
+
+app.use(
+  cors({
+    origin: ["https://ivan954.github.io", "http://localhost:3000"],
+    credentials: true,
+  })
+);
 
 const PORT = process.env.PORT || 5000;
 
