@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c38450f255e030323b4811063c609966",
+    "revision": "4636bfb9e6e7be6853ddaf8a03686892",
     "url": "/ProShop/index.html"
   },
   {
-    "revision": "fef05f7800e004d7c084",
+    "revision": "08eac097ecc11f423dbf",
     "url": "/ProShop/static/css/main.61c6d28d.chunk.css"
   },
   {
@@ -16,12 +16,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ProShop/static/js/2.22537640.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fef05f7800e004d7c084",
-    "url": "/ProShop/static/js/main.8ad28f65.chunk.js"
+    "revision": "08eac097ecc11f423dbf",
+    "url": "/ProShop/static/js/main.82574f10.chunk.js"
   },
   {
     "revision": "4e0e34f265fae8f33b01b27ae29d9d6f",
-    "url": "/ProShop/static/js/main.8ad28f65.chunk.js.LICENSE.txt"
+    "url": "/ProShop/static/js/main.82574f10.chunk.js.LICENSE.txt"
   },
   {
     "revision": "93054878da1c0925fc27",
