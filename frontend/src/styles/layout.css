@@ -1,0 +1,50 @@
+/* Layout Styles */
+@media (min-width: 1200px) {
+  .custom-container {
+    max-width: 95% !important;
+  }
+}
+
+/* Animation Styles */
+.collapse {
+  transition: var(--transition);
+}
+
+/* Link Styles */
+a {
+  color: var(--primary);
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+/* Dropdown Styles */
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: var(--primary);
+}
+
+/* Button Container Styles */
+.filter-container .d-flex.gap-2 {
+  height: var(--input-height);
+}
+
+.filter-container .d-flex.gap-2 .btn {
+  padding: 0.375rem 0.75rem;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .filter-container .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .filter-container .d-flex.gap-2 {
+    height: auto;
+  }
+
+  .filter-container .d-flex.gap-2 .btn {
+    height: var(--input-height);
+  }
+}

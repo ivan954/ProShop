@@ -1,0 +1,146 @@
+/* Filter Styles */
+.filter-container {
+  background: var(--light-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.filter-container .form-group {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-container .form-label {
+  font-weight: 600;
+  color: var(--gray);
+  margin-bottom: 0.5rem;
+}
+
+.filter-container .form-control {
+  font-size: 0.9rem;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--border);
+  height: var(--input-height);
+  color: var(--gray);
+  background-color: var(--white);
+}
+
+.filter-container .form-control::placeholder {
+  color: var(--light-gray);
+  opacity: 0.8;
+}
+
+.filter-container .form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(40, 89, 137, 0.25);
+  color: var(--gray);
+  background-color: var(--white);
+}
+
+/* Price Range Inputs */
+.price-range-container {
+  display: flex;
+  gap: 10px;
+}
+
+.price-range-container .form-control {
+  flex: 1;
+}
+
+/* Filter Button */
+.filter-container .btn-primary {
+  width: 100%;
+  max-width: 200px;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: var(--transition);
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.filter-container .btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .filter-container {
+    padding: 1rem;
+  }
+
+  .filter-container .collapse:not(.show) {
+    display: none;
+  }
+
+  .filter-container .collapse.show {
+    margin-top: 1rem;
+  }
+
+  .filter-container .btn-outline-primary {
+    background: var(--white);
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+
+  .filter-container .btn-outline-primary:hover,
+  .filter-container .btn-outline-primary:focus {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+  }
+
+  .filter-container .row > div {
+    margin-bottom: 1rem;
+  }
+
+  .filter-container .btn {
+    width: 100%;
+    max-width: none;
+  }
+
+  .price-range-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .filter-container .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .filter-container .form-control {
+    width: 100%;
+  }
+
+  .filter-container .d-flex.gap-2 {
+    flex-direction: column;
+    gap: 0.5rem !important;
+  }
+
+  .filter-container .d-flex.gap-2 .btn {
+    margin: 0;
+  }
+}
+
+/* Style select dropdowns */
+.filter-container select.form-control {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: var(--white);
+  color: var(--gray);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23343a40' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2rem;
+}
+
+.filter-container select.form-control option {
+  color: var(--gray);
+  background-color: var(--white);
+}

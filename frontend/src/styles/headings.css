@@ -1,0 +1,94 @@
+/* Section Heading Styles */
+.section-heading {
+  font-size: 3rem;
+  font-weight: 900;
+  text-align: center;
+  margin: 1rem auto 1rem;
+  padding: 1rem 0;
+  position: relative;
+  text-transform: uppercase;
+  color: var(--primary);
+  width: fit-content;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 0px rgba(40, 89, 137, 0.1);
+}
+
+.section-heading::before,
+.section-heading::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--primary);
+}
+
+.section-heading::before {
+  top: 0;
+  left: -20px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.section-heading::after {
+  bottom: 0;
+  right: -20px;
+  border-left: none;
+  border-top: none;
+}
+
+.section-heading span {
+  position: relative;
+  z-index: 1;
+}
+
+.section-heading span::before,
+.section-heading span::after {
+  content: "•";
+  color: var(--primary-hover);
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.section-heading span::before {
+  left: -40px;
+}
+
+.section-heading span::after {
+  right: -40px;
+}
+
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 2.2rem;
+    margin: 1.5rem auto 2rem;
+  }
+
+  .section-heading::before,
+  .section-heading::after {
+    width: 30px;
+    height: 30px;
+  }
+
+  .section-heading::before {
+    left: -15px;
+  }
+
+  .section-heading::after {
+    right: -15px;
+  }
+
+  .section-heading span::before,
+  .section-heading span::after {
+    font-size: 1.5rem;
+  }
+
+  .section-heading span::before {
+    left: -30px;
+  }
+
+  .section-heading span::after {
+    right: -30px;
+  }
+}

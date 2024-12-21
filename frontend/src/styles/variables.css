@@ -1,0 +1,18 @@
+:root {
+  --primary: #285989;
+  --primary-hover: #537698;
+  --dark: #343a40;
+  --white: #fff;
+  --gray: #495057;
+  --light-gray: #6c757d;
+  --light-bg: #f8f9fa;
+  --border: #ced4da;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --transition: all 0.3s ease;
+  --border-radius: 8px;
+  --border-radius-sm: 6px;
+  --border-radius-lg: 20px;
+  --input-height: 48px;
+  --input-height-sm: 40px;
+}
