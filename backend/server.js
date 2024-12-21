@@ -23,6 +23,17 @@ if (process.env.NODE_ENV === "development") {
 
 app.use(express.json());
 
+app.use(
+  cors({
+    origin: [
+      "https://ivan954.github.io",
+      "http://localhost:3000",
+      "https://ivan954.github.io/ProShop",
+    ],
+    credentials: true,
+  })
+);
+
 app.use("/api/products", productRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/orders", orderRoutes);
@@ -52,7 +63,11 @@ app.use(errorHandler);
 
 app.use(
   cors({
-    origin: ["https://ivan954.github.io", "http://localhost:3000"],
+    origin: [
+      "https://ivan954.github.io",
+      "http://localhost:3000",
+      "https://ivan954.github.io/ProShop",
+    ],
     credentials: true,
   })
 );
