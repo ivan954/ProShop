@@ -1,4 +1,4 @@
 export const API_URL =
   process.env.NODE_ENV === "production"
-    ? "https://your-app-name.adaptable.app"
+    ? "https://unleashed-shade-parka.glitch.me" // Put your Glitch URL here
     : "http://localhost:5000";
