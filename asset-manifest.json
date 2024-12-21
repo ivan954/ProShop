@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/ProShop/static/css/main.61c6d28d.chunk.css",
-    "main.js": "/ProShop/static/js/main.82574f10.chunk.js",
-    "main.js.map": "/ProShop/static/js/main.82574f10.chunk.js.map",
+    "main.js": "/ProShop/static/js/main.9e3f15fe.chunk.js",
+    "main.js.map": "/ProShop/static/js/main.9e3f15fe.chunk.js.map",
     "runtime-main.js": "/ProShop/static/js/runtime-main.5aede0ea.js",
     "runtime-main.js.map": "/ProShop/static/js/runtime-main.5aede0ea.js.map",
     "static/js/2.22537640.chunk.js": "/ProShop/static/js/2.22537640.chunk.js",
     "static/js/2.22537640.chunk.js.map": "/ProShop/static/js/2.22537640.chunk.js.map",
     "index.html": "/ProShop/index.html",
-    "precache-manifest.cf669e12150427e521181e92ebaf3f33.js": "/ProShop/precache-manifest.cf669e12150427e521181e92ebaf3f33.js",
+    "precache-manifest.d508d24c2c42d07edf73d812b46b2898.js": "/ProShop/precache-manifest.d508d24c2c42d07edf73d812b46b2898.js",
     "service-worker.js": "/ProShop/service-worker.js",
     "static/css/main.61c6d28d.chunk.css.map": "/ProShop/static/css/main.61c6d28d.chunk.css.map",
     "static/js/2.22537640.chunk.js.LICENSE.txt": "/ProShop/static/js/2.22537640.chunk.js.LICENSE.txt",
-    "static/js/main.82574f10.chunk.js.LICENSE.txt": "/ProShop/static/js/main.82574f10.chunk.js.LICENSE.txt"
+    "static/js/main.9e3f15fe.chunk.js.LICENSE.txt": "/ProShop/static/js/main.9e3f15fe.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5aede0ea.js",
     "static/js/2.22537640.chunk.js",
     "static/css/main.61c6d28d.chunk.css",
-    "static/js/main.82574f10.chunk.js"
+    "static/js/main.9e3f15fe.chunk.js"
   ]
 }
