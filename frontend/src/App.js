@@ -21,8 +21,8 @@ import OrderListScreen from "./screens/OrderListScreen";
 import "./bootstrap.min.css";
 
 const App = () => {
-  const basename = process.env.REACT_APP_BASENAME || "/ProShop";
-
+  const basename = process.env.REACT_APP_BASENAME === "/" ? "" : (process.env.REACT_APP_BASENAME || "/ProShop");
+  
   return (
     <>
       <Router basename={basename}>
