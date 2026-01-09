@@ -21,9 +21,11 @@ import OrderListScreen from "./screens/OrderListScreen";
 import "./bootstrap.min.css";
 
 const App = () => {
+  const basename = process.env.REACT_APP_BASENAME || "/ProShop";
+
   return (
     <>
-      <Router basename="/ProShop">
+      <Router basename={basename}>
         <Header />
         <main className="m-4">
           <div>

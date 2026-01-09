@@ -1,0 +1,11 @@
+{
+  "buildCommand": "cd frontend && npm install && REACT_APP_BASENAME=/ npm run build",
+  "outputDirectory": "frontend/build",
+  "installCommand": "cd frontend && npm install",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
