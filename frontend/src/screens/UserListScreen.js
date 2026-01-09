@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { LinkContainer } from "react-router-bootstrap";
-import { Table, Button } from "react-bootstrap";
+import { Table, Button, Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
@@ -20,13 +20,16 @@ const UserListScreen = () => {
   const userDelete = useSelector((state) => state.userDelete);
   const { success: successDelete } = userDelete;
 
+  const userCreate = useSelector((state) => state.userCreate);
+  const { success: successCreate } = userCreate;
+
   useEffect(() => {
     if (userInfo && userInfo.isAdmin) {
       dispatch(listUsers());
     } else {
       navigate("/login");
     }
-  }, [dispatch, navigate, successDelete, userInfo]);
+  }, [dispatch, navigate, successDelete, successCreate, userInfo]);
 
   const deleteHandler = (id) => {
     if (window.confirm("Are you sure")) {
@@ -36,7 +39,34 @@ const UserListScreen = () => {
 
   return (
     <>
-      <h1>Users</h1>
+      <Row className="align-items-center mb-4">
+        <Col>
+          <h1>Users</h1>
+        </Col>
+        <Col className="text-right">
+          <Button
+            variant="primary"
+            className="my-3 px-4 py-2"
+            onClick={() => navigate("/admin/user/create")}
+            style={{
+              borderRadius: "8px",
+              fontWeight: "500",
+              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+              transition: "all 0.3s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-2px)";
+              e.currentTarget.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.15)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.1)";
+            }}
+          >
+            <i className="fas fa-plus mr-2"></i> Create User
+          </Button>
+        </Col>
+      </Row>
       {loading ? (
         <Loader />
       ) : error ? (
