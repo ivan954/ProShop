@@ -98,11 +98,11 @@ Email: john@example.com
 Password: 123456
 ```
 
-## Demp Paypal Credentials
+## Demo Paypal Credentials
 
 ```
-PAY_EMAIL = johndow123@personal.example.com
-PAY_PASSWORD = JohnDow123@personal.
+Email: johndow123@personal.example.com
+Password: JohnDow123@personal.
 
 ```
 
