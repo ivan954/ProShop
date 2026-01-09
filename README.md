@@ -2,7 +2,7 @@
 
 > Modern full-stack eCommerce platform built with MERN (MongoDB, Express, React, Node.js) stack & Redux
 
-![ProShop Screenshot](screenshot.png)
+![ProShop Screenshot](proshop.png)
 
 ## Key Features
 
