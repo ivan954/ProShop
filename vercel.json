@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd frontend && npm install && node scripts/build-vercel.js && cross-env NODE_OPTIONS=--openssl-legacy-provider PUBLIC_URL=/ REACT_APP_BASENAME=/ npm run build",
+  "buildCommand": "cd frontend && npm install && node scripts/build-vercel.js && cross-env NODE_OPTIONS=--openssl-legacy-provider PUBLIC_URL=/ REACT_APP_BASENAME=/ react-scripts build",
   "outputDirectory": "frontend/build",
   "rewrites": [
     {
