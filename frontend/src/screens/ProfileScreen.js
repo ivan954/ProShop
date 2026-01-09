@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Table, Form, Button, Row, Col } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
@@ -75,6 +74,7 @@ const ProfileScreen = () => {
               placeholder="Enter name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              autoComplete="name"
             ></Form.Control>
           </Form.Group>
 
@@ -85,6 +85,7 @@ const ProfileScreen = () => {
               placeholder="Enter email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              autoComplete="email"
             ></Form.Control>
           </Form.Group>
 
@@ -95,6 +96,7 @@ const ProfileScreen = () => {
               placeholder="Enter password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              autoComplete="new-password"
             ></Form.Control>
           </Form.Group>
 
@@ -105,6 +107,7 @@ const ProfileScreen = () => {
               placeholder="Confirm password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
+              autoComplete="new-password"
             ></Form.Control>
           </Form.Group>
 

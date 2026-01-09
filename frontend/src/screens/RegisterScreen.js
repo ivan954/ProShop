@@ -52,6 +52,7 @@ const RegisterScreen = () => {
             placeholder="Enter name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            autoComplete="name"
           ></Form.Control>
         </Form.Group>
 
@@ -62,6 +63,7 @@ const RegisterScreen = () => {
             placeholder="Enter email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            autoComplete="email"
           ></Form.Control>
         </Form.Group>
 
@@ -72,6 +74,7 @@ const RegisterScreen = () => {
             placeholder="Enter password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            autoComplete="new-password"
           ></Form.Control>
         </Form.Group>
 
@@ -82,6 +85,7 @@ const RegisterScreen = () => {
             placeholder="Confirm password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
+            autoComplete="new-password"
           ></Form.Control>
         </Form.Group>
 

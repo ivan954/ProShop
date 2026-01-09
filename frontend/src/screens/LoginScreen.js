@@ -44,6 +44,7 @@ const LoginScreen = () => {
             placeholder="Enter email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            autoComplete="email"
           ></Form.Control>
         </Form.Group>
 
@@ -54,6 +55,7 @@ const LoginScreen = () => {
             placeholder="Enter password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            autoComplete="current-password"
           ></Form.Control>
         </Form.Group>
 
