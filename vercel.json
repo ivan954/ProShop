@@ -3,14 +3,6 @@
   "outputDirectory": "frontend/build",
   "rewrites": [
     {
-      "source": "/static/(.*)",
-      "destination": "/static/$1"
-    },
-    {
-      "source": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|json|woff|woff2|ttf|eot))",
-      "destination": "/$1"
-    },
-    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
