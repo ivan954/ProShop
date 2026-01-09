@@ -20,7 +20,7 @@ const ProductCarousel = () => {
     <Loader />
   ) : error ? (
     <Message variant="danger">{error}</Message>
-  ) : (
+  ) : !products || !Array.isArray(products) || products.length === 0 ? null : (
     <Carousel pause="hover" className="mb-4">
       {products.map((product) => (
         <Carousel.Item key={product._id}>
