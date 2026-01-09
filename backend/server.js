@@ -61,17 +61,6 @@ if (process.env.NODE_ENV === "production") {
 app.use(notFound);
 app.use(errorHandler);
 
-app.use(
-  cors({
-    origin: [
-      "https://ivan954.github.io",
-      "http://localhost:3000",
-      "https://ivan954.github.io/ProShop",
-    ],
-    credentials: true,
-  })
-);
-
 const PORT = process.env.PORT || 5000;
 
 app.listen(

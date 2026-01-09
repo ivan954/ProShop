@@ -86,7 +86,7 @@ cd frontend
 npm run build
 ```
 
-## Demo Credentials
+## Demo login Credentials
 
 ```
 Admin Access:
@@ -96,6 +96,14 @@ Password: 123456
 Customer Access:
 Email: john@example.com
 Password: 123456
+```
+
+## Demp Paypal Credentials
+
+```
+PAY_EMAIL = johndow123@personal.example.com
+PAY_PASSWORD = JohnDow123@personal.
+
 ```
 
 ## Technologies Used
