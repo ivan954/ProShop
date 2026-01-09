@@ -12,7 +12,7 @@
     "data:import": "node backend/seeder",
     "data:destroy": "node backend/seeder -d",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend",
-    "vercel-build": "cd frontend && npm install && npm run build:vercel"
+    "vercel-build": "cd frontend && npm install && PUBLIC_URL=/ REACT_APP_BASENAME=/ npm run build:vercel"
   },
   "author": "Brad Traversy",
   "license": "MIT",
