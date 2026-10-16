@@ -1,3 +1,5 @@
+import fs from "fs";
+import path from "path";
 import express from "express";
 import dotenv from "dotenv";
 import morgan from "morgan";
@@ -46,12 +48,13 @@ app.get("/api/config/paypal", (req, res) =>
 
 app.use("/uploads", express.static(uploadsDir));
 
-if (process.env.NODE_ENV === "production") {
+// Serve the React build only when it exists (an API-only deploy has no build)
+const frontendIndex = path.join(frontendBuildDir, "index.html");
+
+if (process.env.NODE_ENV === "production" && fs.existsSync(frontendIndex)) {
   app.use(express.static(frontendBuildDir));
 
-  app.get("*", (req, res) =>
-    res.sendFile(path.join(frontendBuildDir, "index.html"))
-  );
+  app.get("*", (req, res) => res.sendFile(frontendIndex));
 } else {
   app.get("/", (req, res) => {
     res.send("API is running....");
