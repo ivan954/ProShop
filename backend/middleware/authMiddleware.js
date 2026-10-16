@@ -9,19 +9,25 @@ const protect = asyncHandler(async (req, res, next) => {
     req.headers.authorization &&
     req.headers.authorization.startsWith('Bearer')
   ) {
+    let decoded
     try {
       token = req.headers.authorization.split(' ')[1]
-
-      const decoded = jwt.verify(token, process.env.JWT_SECRET)
-
-      req.user = await User.findById(decoded.id).select('-password')
-
-      next()
+      decoded = jwt.verify(token, process.env.JWT_SECRET)
     } catch (error) {
       console.error(error)
       res.status(401)
       throw new Error('Not authorized, token failed')
     }
+
+    req.user = await User.findById(decoded.id).select('-password')
+
+    // Token is valid but the user no longer exists (e.g. after re-seeding the DB)
+    if (!req.user) {
+      res.status(401)
+      throw new Error('Not authorized, user not found')
+    }
+
+    return next()
   }
 
   if (!token) {

@@ -12,6 +12,7 @@ import {
 } from "react-bootstrap";
 import Message from "../components/Message";
 import { addToCart, removeFromCart } from "../actions/cartActions";
+import getImageUrl from "../utils/imageUrl";
 
 const CartScreen = () => {
   const { id: productId } = useParams();
@@ -53,7 +54,7 @@ const CartScreen = () => {
               <ListGroup.Item key={item.product}>
                 <Row>
                   <Col md={2}>
-                    <Image src={item.image} alt={item.name} fluid rounded />
+                    <Image src={getImageUrl(item.image)} alt={item.name} fluid rounded />
                   </Col>
                   <Col md={3}>
                     <Link to={`/product/${item.product}`}>{item.name}</Link>

@@ -19,6 +19,7 @@ import {
   createProductReview,
 } from "../actions/productActions";
 import { PRODUCT_CREATE_REVIEW_RESET } from "../constants/productConstants";
+import getImageUrl from "../utils/imageUrl";
 
 const ProductScreen = () => {
   const [qty, setQty] = useState(1);
@@ -81,7 +82,7 @@ const ProductScreen = () => {
           <Meta title={product.name} />
           <Row>
             <Col md={6}>
-              <Image src={product.image} alt={product.name} fluid />
+              <Image src={getImageUrl(product.image)} alt={product.name} fluid />
             </Col>
             <Col md={3}>
               <ListGroup variant="flush">

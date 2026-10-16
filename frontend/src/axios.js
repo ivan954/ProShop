@@ -1,10 +1,8 @@
 import axios from "axios";
+import { API_URL } from "./config";
 
 const instance = axios.create({
-  baseURL:
-    typeof process !== "undefined" && process.env.NODE_ENV === "production"
-      ? "https://unleashed-shade-parka.glitch.me"
-      : "http://localhost:5000",
+  baseURL: API_URL,
 });
 
 export default instance;

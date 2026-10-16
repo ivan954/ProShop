@@ -7,6 +7,7 @@ import CheckoutSteps from "../components/CheckoutSteps";
 import { createOrder } from "../actions/orderActions";
 import { ORDER_CREATE_RESET } from "../constants/orderConstants";
 import { USER_DETAILS_RESET } from "../constants/userConstants";
+import getImageUrl from "../utils/imageUrl";
 
 const PlaceOrderScreen = () => {
   const dispatch = useDispatch();
@@ -94,7 +95,7 @@ const PlaceOrderScreen = () => {
                       <Row>
                         <Col md={1}>
                           <Image
-                            src={item.image}
+                            src={getImageUrl(item.image)}
                             alt={item.name}
                             fluid
                             rounded
