@@ -68,7 +68,7 @@ const ProductFilter = ({ onFilter, onSort }) => {
               </Col>
               <Col lg={3} md={4}>
                 <Button type="submit" variant="primary" className="w-100">
-                  Search==
+                  Search
                 </Button>
               </Col>
             </Row>
